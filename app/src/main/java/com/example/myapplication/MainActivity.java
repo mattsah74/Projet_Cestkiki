@@ -18,15 +18,10 @@ public class MainActivity<image1> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        ImageView test = findViewById(R.id.imageView3);
-//
-//        Bitmap image1 = BitmapFactory.decodeFile("scarlett.png");
-//        test.setImageBitmap(image1);
-
-        this.imageView = (ImageView) this.findViewById(R.id.imageView12);
+        this.imageView = (ImageView) this.findViewById(R.id.imageView1);
 
         this.button1 = (Button) this.findViewById(R.id.button);
-        this.button2 = (Button) this.findViewById(R.id.button2);
+
 
         this.button1.setOnClickListener(new Button.OnClickListener() {
 
@@ -36,18 +31,12 @@ public class MainActivity<image1> extends AppCompatActivity {
             }
         });
 
-        this.button2.setOnClickListener(new Button.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                showImage2();
-            }
-        });
     }
 
 
     private void showImage1() {
-        this.imageView.setImageResource(R.drawable.robertdeniro);
+        this.imageView.setImageResource(R.drawable.scarlett);
     }
 
     private void showImage2() {

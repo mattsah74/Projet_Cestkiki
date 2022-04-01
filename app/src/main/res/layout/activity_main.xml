@@ -18,7 +18,7 @@
         tools:layout_editor_absoluteY="199dp" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/imageView1"
         android:layout_width="125dp"
         android:layout_height="178dp"
         app:srcCompat="@drawable/robertdeniro"
@@ -104,4 +104,14 @@
         app:srcCompat="@drawable/robertdeniro"
         tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="5dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="123dp"
+        android:layout_height="175dp"
+        android:text="Button"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="5dp"
+        tools:visibility="invisible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
