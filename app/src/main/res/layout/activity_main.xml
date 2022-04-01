@@ -4,8 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="136dp"
+    tools:layout_editor_absoluteY="2dp">
 
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="641dp"
+        tools:layout_editor_absoluteY="199dp" />
 
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="391dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="516dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="641dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="516dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="391dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/robertdeniro"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="5dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

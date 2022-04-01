@@ -23,7 +23,7 @@ public class MainActivity<image1> extends AppCompatActivity {
 //        Bitmap image1 = BitmapFactory.decodeFile("scarlett.png");
 //        test.setImageBitmap(image1);
 
-        this.imageView = (ImageView) this.findViewById(R.id.imageView);
+        this.imageView = (ImageView) this.findViewById(R.id.imageView12);
 
         this.button1 = (Button) this.findViewById(R.id.button);
         this.button2 = (Button) this.findViewById(R.id.button2);
