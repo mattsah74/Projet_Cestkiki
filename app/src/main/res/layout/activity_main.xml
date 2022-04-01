@@ -6,27 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button1"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="695dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button2"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="431dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="170dp"
-        android:layout_height="292dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="79dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
