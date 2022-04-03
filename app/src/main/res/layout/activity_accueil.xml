@@ -10,26 +10,36 @@
         android:id="@+id/cat1"
         android:layout_width="226dp"
         android:layout_height="91dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="171dp"
         android:text="Categorie 1"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cat2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/cat2"
         android:layout_width="226dp"
         android:layout_height="91dp"
+        android:layout_marginBottom="168dp"
         android:text="Categorie 2"
-        tools:layout_editor_absoluteX="361dp"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="557dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="301dp"
         android:layout_height="60dp"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="295dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Sélectionnez 2 catégories"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

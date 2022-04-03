@@ -43,14 +43,12 @@ public class accueil<image1> extends AppCompatActivity {
         if (tab[0] != 0){
             if (tab[0]<cat){
                 tab[1] = cat;
-            }
-            else{
+            } else{
                 int inter = tab[0];
                 tab[0] = cat;
                 tab[1] = inter;
             }
-        }
-        else{
+        } else{
             tab[1] = cat;
         }
     }

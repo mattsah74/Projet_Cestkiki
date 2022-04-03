@@ -28,8 +28,9 @@ public class MainActivity<image1> extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (MainActivity.this, accueil.class);
-                startActivity(i);
+//                Intent i = new Intent (MainActivity.this, accueil.class);
+//                startActivity(i);
+                showImage1();
             }
         });
 
