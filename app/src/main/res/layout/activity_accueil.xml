@@ -6,26 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".accueil">
 
+    <TextView
+        android:id="@+id/txt_cat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="523dp"
+        tools:layout_editor_absoluteY="326dp" />
+
     <Button
         android:id="@+id/cat1"
         android:layout_width="226dp"
         android:layout_height="91dp"
         android:layout_marginStart="115dp"
-        android:layout_marginEnd="140dp"
         android:layout_marginBottom="171dp"
         android:text="Categorie 1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cat2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/cat2"
         android:layout_width="226dp"
         android:layout_height="91dp"
+        android:layout_marginEnd="108dp"
         android:layout_marginBottom="168dp"
         android:text="Categorie 2"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="557dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -41,5 +47,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="389dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="36dp"
+        android:text="Vous avez choisi les catégories:           et    "
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="251dp" />
+
+    <TextView
+        android:id="@+id/txt_cat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="467dp"
+        tools:layout_editor_absoluteY="326dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
