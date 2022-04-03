@@ -10,108 +10,129 @@
 
 
     <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        android:layout_marginEnd="646dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
+
+    <ImageView
         android:id="@+id/imageView12"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="641dp"
-        tools:layout_editor_absoluteY="199dp" />
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="199dp" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="125dp"
-        android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="199dp" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="125dp"
-        android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="199dp" />
+        android:layout_marginEnd="771dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="391dp"
-        tools:layout_editor_absoluteY="199dp" />
+        android:layout_marginEnd="396dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="516dp"
-        tools:layout_editor_absoluteY="199dp" />
+        android:layout_marginEnd="271dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="641dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="146dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="516dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="391dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="125dp"
         android:layout_height="178dp"
-        app:srcCompat="@drawable/robertdeniro"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="123dp"
         android:layout_height="175dp"
+        android:layout_marginTop="104dp"
         android:text="Button"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="5dp"
-        tools:visibility="invisible" />
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="736dp"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        android:layout_marginEnd="521dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robertdeniro" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

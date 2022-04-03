@@ -7,11 +7,19 @@
     tools:context=".accueil">
 
     <Button
-        android:id="@+id/creerpartie"
+        android:id="@+id/cat1"
         android:layout_width="226dp"
         android:layout_height="91dp"
-        android:text="Créer partie"
+        android:text="Categorie 1"
         tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Button
+        android:id="@+id/cat2"
+        android:layout_width="226dp"
+        android:layout_height="91dp"
+        android:text="Categorie 2"
+        tools:layout_editor_absoluteX="361dp"
         tools:layout_editor_absoluteY="160dp" />
 
     <EditText
@@ -20,8 +28,8 @@
         android:layout_height="60dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Rentrez le code de jeu"
-        tools:layout_editor_absoluteX="414dp"
-        tools:layout_editor_absoluteY="191dp" />
+        android:text="Sélectionnez 2 catégories"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="51dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
