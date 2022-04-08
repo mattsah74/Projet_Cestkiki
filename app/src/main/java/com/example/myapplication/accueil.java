@@ -48,7 +48,7 @@ public class accueil extends AppCompatActivity {
                 int inter = cloud.getInt("cateselec", 2)%10;
                 txt1.setText(String.valueOf(cloud.getInt("cateselec", 2)%10));
                 txt2.setText(String.valueOf(inter));
-                cloud.getInt(s,)
+                //cloud.getInt()
 
 
             }});
