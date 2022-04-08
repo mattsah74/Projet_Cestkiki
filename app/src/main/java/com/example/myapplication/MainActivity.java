@@ -35,8 +35,13 @@ public class MainActivity<image1> extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (MainActivity.this, accueil.class);
+                String value="12";
+                Intent i = new Intent(MainActivity.this, accueil.class);
+                i.putExtra("code",value);
                 startActivity(i);
+
+                Intent j = new Intent (MainActivity.this, accueil.class);
+                startActivity(j);
                 //showImage1();
             }
         });

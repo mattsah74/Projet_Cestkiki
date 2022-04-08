@@ -23,7 +23,6 @@ public class accueil extends AppCompatActivity {
         cloud = getApplicationContext().getSharedPreferences("cloud", 0);
         SharedPreferences.Editor editor = cloud.edit();
 
-
         int [] cateselec = {0, 0};
         int tab_cat_sauv = 0;
 
@@ -45,8 +44,9 @@ public class accueil extends AppCompatActivity {
 //                txt2.setText(String.valueOf(cateselec[1]));
                 int test = majcat(cateselec);
                 editor.putInt("cateselec", test);
-                int inter = cloud.getInt("cateselec", 2)%10;
-                txt1.setText(String.valueOf(cloud.getInt("cateselec", 2)%10));
+                editor.apply();
+                int inter = cloud.getInt("cateselec", 0)%10;
+                txt1.setText(String.valueOf((cloud.getInt("cateselec", 0)- inter)%10));
                 txt2.setText(String.valueOf(inter));
                 //cloud.getInt()
 
@@ -58,9 +58,16 @@ public class accueil extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                rajoutcate(cateselec, 2);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
+//                rajoutcate(cateselec, 2);
+//                txt1.setText(String.valueOf(cateselec[0]));
+//                txt2.setText(String.valueOf(cateselec[1]));
+
+                Bundle extras = getIntent().getExtras();
+                if (extras != null) {
+                    String value = extras.getString("code");
+                    txterreur.setText(value);
+                    //The key argument here must match that used in the other activity
+                }
             }});
 
 
