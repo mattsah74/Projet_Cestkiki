@@ -145,10 +145,11 @@ public class accueil extends AppCompatActivity {
         this.jouer.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(accueil.this, prejeu.class);
-                i.putExtra("cat1",cateselec[0]);
-                i.putExtra("cat2", cateselec[1]);
-                startActivity(i);
+
+                Intent a = new Intent(accueil.this, prejeu.class);
+                a.putExtra("cat1",cateselec[0]);
+                a.putExtra("cat2", cateselec[1]);
+                startActivity(a);
 
             }});
 

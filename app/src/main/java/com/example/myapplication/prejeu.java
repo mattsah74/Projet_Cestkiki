@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class prejeu extends AppCompatActivity {
     private TextView cat1, cat2;
-    private Button btn1;
+    private Button creer_part;
 
 
     @Override
@@ -23,21 +23,16 @@ public class prejeu extends AppCompatActivity {
         setContentView(R.layout.activity_prejeu);
 
         Bundle extras = getIntent().getExtras();
-        String categorie1 = extras.getString("cat1"); // cela permet de recuperer la valeur de l'activité main
-        String categorie2 = extras.getString("cat2");
+        int categorie1 = extras.getInt("cat1"); // cela permet de recuperer la valeur de l'activité main
+        int categorie2 = extras.getInt("cat2");
 
-        cat1 = (TextView) findViewById(R.id.catetest1);
-        cat2 = (TextView) findViewById(R.id.catetest2);
-
-        this.btn1 = (Button) this.findViewById(R.id.btn1);
+        this.creer_part = (Button) this.findViewById(R.id.btn_creer);
 
 
-        this.btn1.setOnClickListener(new Button.OnClickListener() {
+        this.creer_part.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                cat1.setText(categorie1);
-                cat2.setText(categorie2);
 
             }});
 
