@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class accueil extends AppCompatActivity {
-    private Button cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8;
-    private TextView txt1, txt2, txterreur, txt_tour;
+    private Button cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8, jouer;
+    private TextView txt1, txt2, txterreur;
     SharedPreferences cloud;
     int tour = 0; // utilisé pour rentrer les caté selectionne dans rajoutcate
 
@@ -22,6 +23,7 @@ public class accueil extends AppCompatActivity {
         //Cette directive enlève la barre de titre
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
@@ -38,7 +40,6 @@ public class accueil extends AppCompatActivity {
 
         txt1 = (TextView) findViewById(R.id.txt_cat1);
         txt2 = (TextView) findViewById(R.id.txt_cat2);
-        txt_tour = (TextView) findViewById(R.id.txt_tour);
         txterreur = (TextView) findViewById(R.id.txt_erreur);
 
         this.cat1 = (Button) this.findViewById(R.id.cat1);
@@ -49,6 +50,7 @@ public class accueil extends AppCompatActivity {
         this.cat6 = (Button) this.findViewById(R.id.cat6);
         this.cat7 = (Button) this.findViewById(R.id.cat7);
         this.cat8 = (Button) this.findViewById(R.id.cat8);
+        this.jouer = (Button) this.findViewById(R.id.btn_jouer);
 
 
         this.cat1.setOnClickListener(new Button.OnClickListener() {
@@ -140,6 +142,16 @@ public class accueil extends AppCompatActivity {
 
             }});
 
+        this.jouer.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(accueil.this, prejeu.class);
+                i.putExtra("cat1",cateselec[0]);
+                i.putExtra("cat2", cateselec[1]);
+                startActivity(i);
+
+            }});
+
 
     }
 
@@ -147,9 +159,7 @@ public class accueil extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void rajoutcate(int[] tab, int cat){  // fonction qui nous maj notre tableau avec les categories selectionnées
-        txt_tour.setText(String.valueOf(tour));
 
-        if (ta)
         if (tour==0){
             if(tab[0] != cat && tab[1] != cat){
                 tab[0] = cat;
@@ -169,12 +179,6 @@ public class accueil extends AppCompatActivity {
     }
 
     private int majcat(int[] tab){  // fonctionn qui modifie le tableau pour le maj dans le cloud
-        if(tab[0]>tab[1]){ // remet les chiffres dans le l'ordre croissant
-            int temp0 = tab[0];
-            int temp1 = tab[1];
-            tab[0] = temp1;
-            tab[1] = temp0;
-        }
         int tabfinal;
         tabfinal = 10*tab[0] + tab[1];
         return tabfinal;
