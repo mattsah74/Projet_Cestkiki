@@ -6,17 +6,22 @@ import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class accueil extends AppCompatActivity {
-    private Button cat1;
-    private Button cat2;
-    private TextView txt1, txt2, txterreur;
+    private Button cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8;
+    private TextView txt1, txt2, txterreur, txt_tour;
     SharedPreferences cloud;
+    int tour = 0; // utilisé pour rentrer les caté selectionne dans rajoutcate
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Cette directive enlève la barre de titre
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
@@ -24,38 +29,36 @@ public class accueil extends AppCompatActivity {
         SharedPreferences.Editor editor = cloud.edit();
 
         Bundle extras = getIntent().getExtras();
-        String value = extras.getString("code");
+        String value = extras.getString("code"); // cela permet de recuperer la valeur de l'activité main
 
 
         int [] cateselec = {0, 0};
-        int tab_cat_sauv = 0;
+
 
 
         txt1 = (TextView) findViewById(R.id.txt_cat1);
         txt2 = (TextView) findViewById(R.id.txt_cat2);
+        txt_tour = (TextView) findViewById(R.id.txt_tour);
         txterreur = (TextView) findViewById(R.id.txt_erreur);
 
         this.cat1 = (Button) this.findViewById(R.id.cat1);
         this.cat2 = (Button) this.findViewById(R.id.cat2);
+        this.cat3 = (Button) this.findViewById(R.id.cat3);
+        this.cat4 = (Button) this.findViewById(R.id.cat4);
+        this.cat5 = (Button) this.findViewById(R.id.cat5);
+        this.cat6 = (Button) this.findViewById(R.id.cat6);
+        this.cat7 = (Button) this.findViewById(R.id.cat7);
+        this.cat8 = (Button) this.findViewById(R.id.cat8);
 
 
         this.cat1.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                /*rajoutcate(cateselec, 1);
-//                txt1.setText(String.valueOf(cateselec[0]));
-//                txt2.setText(String.valueOf(cateselec[1]));
+                rajoutcate(cateselec, 1);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
                 int test = majcat(cateselec);
-                editor.putInt("cateselec", test);
-                editor.apply();
-                int inter = cloud.getInt("cateselec", 0)%10;
-                txt1.setText(String.valueOf((cloud.getInt("cateselec", 0)- inter)%10));
-                txt2.setText(String.valueOf(inter));
-                //cloud.getInt()*/
-
-                txterreur.setText(value);
-
 
             }});
 
@@ -64,43 +67,115 @@ public class accueil extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-/*//                rajoutcate(cateselec, 2);
-//                txt1.setText(String.valueOf(cateselec[0]));
-//                txt2.setText(String.valueOf(cateselec[1]));
-                Bundle extras = getIntent().getExtras();
-                if (extras != null) {
-                    String value = extras.getString("code");
-                    txterreur.setText(value);
-                    //The key argument here must match that used in the other activity
-                }*/
-                txterreur.setText(value);
+                rajoutcate(cateselec, 2);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
+
+            }});
+
+        this.cat3.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                rajoutcate(cateselec, 3);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
+
+            }});
+
+        this.cat4.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                rajoutcate(cateselec, 4);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
+
+            }});
+
+        this.cat5.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                rajoutcate(cateselec, 5);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
+
+            }});
+
+        this.cat6.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                rajoutcate(cateselec, 6);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
+
+            }});
+
+        this.cat7.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                rajoutcate(cateselec, 7);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
+
+            }});
+
+        this.cat8.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                rajoutcate(cateselec, 8);
+                txt1.setText(String.valueOf(cateselec[0]));
+                txt2.setText(String.valueOf(cateselec[1]));
+                int test = majcat(cateselec);
 
             }});
 
 
     }
+
+
+
     @SuppressLint("SetTextI18n")
     private void rajoutcate(int[] tab, int cat){  // fonction qui nous maj notre tableau avec les categories selectionnées
-        if(tab[0] != cat && tab[1] != cat){
-            if (tab[0] != 0 ){
-                if (tab[0]<cat ){
-                    tab[1] = cat;
-                } else{
-                    int inter = tab[0];
-                    tab[0] = cat;
-                    tab[1] = inter;
+        txt_tour.setText(String.valueOf(tour));
 
-                }
-            } else{
+        if (ta)
+        if (tour==0){
+            if(tab[0] != cat && tab[1] != cat){
                 tab[0] = cat;
+                tour = 1;
+            }else{
+                txterreur.setText("Vous ne pouvez pas selectionner les 2 mêmes catégories");
             }
         }else{
-            txterreur.setText("Vous ne pouvez pas selectionner les 2 mêmes catégories");
+            if(tab[0] != cat && tab[1] != cat){
+                tab[1] = cat;
+                tour = 0;
+            }else{
+                txterreur.setText("Vous ne pouvez pas selectionner les 2 mêmes catégories");
+            }
         }
+
     }
 
     private int majcat(int[] tab){  // fonctionn qui modifie le tableau pour le maj dans le cloud
-        int tabfinal = tab[0];
+        if(tab[0]>tab[1]){ // remet les chiffres dans le l'ordre croissant
+            int temp0 = tab[0];
+            int temp1 = tab[1];
+            tab[0] = temp1;
+            tab[1] = temp0;
+        }
+        int tabfinal;
         tabfinal = 10*tab[0] + tab[1];
         return tabfinal;
     }
