@@ -21,45 +21,57 @@
         android:id="@+id/cat1"
         android:layout_width="226dp"
         android:layout_height="91dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginBottom="171dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="168dp"
         android:text="Categorie 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/cat2"
-        android:layout_width="226dp"
-        android:layout_height="91dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="168dp"
-        android:text="Categorie 2"
+    <TextView
+        android:id="@+id/txt_erreur"
+        android:layout_width="529dp"
+        android:layout_height="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="389dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="32dp"
+        android:text="Vous avez choisi les catégories:           et    "
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="287dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="301dp"
         android:layout_height="60dp"
         android:layout_marginStart="295dp"
-        android:layout_marginTop="27dp"
         android:layout_marginEnd="295dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Sélectionnez 2 catégories"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="389dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="36dp"
-        android:text="Vous avez choisi les catégories:           et    "
+    <Button
+        android:id="@+id/cat2"
+        android:layout_width="226dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="164dp"
+        android:text="Categorie 2"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="251dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/txt_cat1"
@@ -71,16 +83,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/txt_erreur"
-        android:layout_width="529dp"
-        android:layout_height="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

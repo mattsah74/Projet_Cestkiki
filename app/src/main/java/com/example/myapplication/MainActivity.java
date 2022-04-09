@@ -40,8 +40,6 @@ public class MainActivity<image1> extends AppCompatActivity {
                 i.putExtra("code",value);
                 startActivity(i);
 
-                Intent j = new Intent (MainActivity.this, accueil.class);
-                startActivity(j);
                 //showImage1();
             }
         });
