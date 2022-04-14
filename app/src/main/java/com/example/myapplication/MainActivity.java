@@ -26,9 +26,10 @@ public class MainActivity<image1> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.imageView = (ImageView) this.findViewById(R.id.imageView1);
+        this.imageView = (ImageView) this.findViewById(R.id.imageView8);
 
         this.button = (Button) this.findViewById(R.id.button);
+        this.button2 = (Button) this.findViewById(R.id.button2);
 
 
         this.button.setOnClickListener(new Button.OnClickListener() {
@@ -43,13 +44,22 @@ public class MainActivity<image1> extends AppCompatActivity {
                 //showImage1();
             }
         });
+        this.button2.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+                showImage1();
+            }
+        });
 
 
     }
 
 
     private void showImage1() {
-        this.imageView.setImageResource(R.drawable.scarlett);
+        this.imageView.setImageResource(R.drawable.george);
     }
 
     private void showImage2() {

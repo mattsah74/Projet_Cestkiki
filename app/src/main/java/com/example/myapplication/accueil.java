@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class accueil extends AppCompatActivity {
     private Button cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8, jouer;
     private TextView txt1, txt2, txterreur;
-    SharedPreferences cloud;
+
     int tour = 0; // utilisé pour rentrer les caté selectionne dans rajoutcate
 
     @Override
@@ -27,8 +27,6 @@ public class accueil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
-        cloud = getApplicationContext().getSharedPreferences("cloud", 0);
-        SharedPreferences.Editor editor = cloud.edit();
 
         Bundle extras = getIntent().getExtras();
         String value = extras.getString("code"); // cela permet de recuperer la valeur de l'activité main

@@ -81,6 +81,20 @@
         tools:layout_editor_absoluteX="81dp"
         tools:visibility="visible" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="110dp"
+        android:layout_height="97dp"
+        android:text="affichage"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843"
+        tools:visibility="visible" />
+
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="125dp"
