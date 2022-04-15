@@ -92,12 +92,12 @@ public class prejeu extends AppCompatActivity {
         while(tour < 12){
             nombreAleatoire = 1 + (int)(Math.random() * ((31 - 1) + 1)); //Je génère un nombre aléatoire compris entre [1;31]
             nombreAleatoire -= 1;
-            System.out.println(nombreAleatoire); // Pour vérifier le nb de tours.
+            //System.out.println(nombreAleatoire); // Pour vérifier le nb de tours.
 
             for (int i = 0; i < tour ; i++){
                 if (tab[nombreAleatoire] == 1){
                     valide = 0;
-                    System.out.println("Déjà tiré"); // Test d'existence.
+                    //System.out.println("Déjà tiré"); // Test d'existence.
                     break;
 
                 }else{
@@ -114,7 +114,7 @@ public class prejeu extends AppCompatActivity {
         // CREATION DU BINAIRE ET TRADUCTION EN HEXADECIMAL
 
         for (int i = 0; i < 31; i++){
-            System.out.print(tab[i]);
+            //System.out.print(tab[i]);
         }
 
         //int nbbinaire = 0;
