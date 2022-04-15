@@ -78,7 +78,7 @@ public class prejeu extends AppCompatActivity {
             }
         }
         for(int i=0; i<30; i++){
-            code = code + tab[i]*(10^i);
+            code = code + tab[i]*(Math.pow(2,(int) i));
         }
         txt1.setText(String.valueOf(code));
 
