@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Grilledejeu">
 
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="125dp"
+        android:layout_height="178dp"
+        app:srcCompat="@drawable/george"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="37dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

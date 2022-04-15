@@ -59,91 +59,28 @@ public class prejeu extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void creercode(){
-//        int[] tab = new int[30];
-//        Arrays.fill(tab,0);
-//        int code = 0;
-//        int nb = 0;
-//
-//        Random random = new Random();
-//        int graine = random.nextInt();
-//        random.setSeed(graine);
-//        while(nb!=12){
-//            nb = 0;
-//            int x = random.nextInt(30);
-//            if(tab[x]==0){
-//                tab[x] = 1;
-//            }
-//            for(int k=0; k<30; k++){
-//                nb = nb + tab[k];
-//            }
-//        }
-//        for(int i=0; i<30; i++){
-//            code = code + tab[i]*(Math.pow(2,(int) i));
-//        }
+        int[] tab = new int[30];
+        Arrays.fill(tab,0);
+        int code = 0;
+        int nb = 0;
 
-
-
-        int nombreAleatoire = 0;
-        int tab [];
-        tab = new int [31]; // !!! Il faut qu'il se crée en fonction du nombre ntot !!!
-        int valide = 1;
-        int tour = 0; // 1 - 12, nb d'images sur la partie graphique.
-
-        while(tour < 12){
-            nombreAleatoire = 1 + (int)(Math.random() * ((31 - 1) + 1)); //Je génère un nombre aléatoire compris entre [1;31]
-            nombreAleatoire -= 1;
-            System.out.println(nombreAleatoire); // Pour vérifier le nb de tours.
-
-            for (int i = 0; i < tour ; i++){
-                if (tab[nombreAleatoire] == 1){
-                    valide = 0;
-                    System.out.println("Déjà tiré"); // Test d'existence.
-                    break;
-
-                }else{
-                    valide = 1;
-                }
+        Random random = new Random();
+        int graine = random.nextInt();
+        random.setSeed(graine);
+        while(nb!=12){
+            nb = 0;
+            int x = random.nextInt(30);
+            if(tab[x]==0){
+                tab[x] = 1;
             }
-
-            if (valide == 1){
-                tab[nombreAleatoire] = 1;
-                tour += 1;
+            for(int k=0; k<30; k++){
+                nb = nb + tab[k];
             }
         }
-
-        // CREATION DU BINAIRE ET TRADUCTION EN HEXADECIMAL
-
-        for (int i = 0; i < 31; i++){
-            System.out.print(tab[i]);
+        for(int i=0; i<30; i++){
+            code = code + tab[i]*(Math.pow(2,(int) i));
         }
-
-        //int nbbinaire = 0;
-        //for (int i = 0; i <48; i++){
-        //    nbbinaire += tab[i]*10^i;
-        //}
-
-        String s = "";
-        for (int i: tab) {
-            s = s + String.valueOf(i);
-        }
-
-        //System.out.println(" ");
-        //System.out.println("Voici la chaîne binaire :");
-        //System.out.println(s);
-
-        //int nbbinaire = Integer.valueOf(s);
-        //System.out.println("Voici le Nombre binaire :");
-        //System.out.println(nbbinaire);
-
-
-
-        //valeur max = 31 chiffres.
-
-        int valDec = Integer.parseInt(s, 2); // conversion binaire -> décimal
-        //System.out.println("Le nb décimal est " + valDec);
-        String valHex = Integer.toString(valDec, 16); // conversion décimal -> hexa
-       // System.out.println("Le nb hexadécimal est " + valHex);
-        txt1.setText(String.valueOf(valHex));
+        txt1.setText(String.valueOf(code));
 
     }
 }
