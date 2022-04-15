@@ -89,6 +89,7 @@ public class prejeu extends AppCompatActivity {
         int valide = 1;
         int tour = 0; // 1 - 12, nb d'images sur la partie graphique.
 
+
         while(tour < 12){
             nombreAleatoire = 1 + (int)(Math.random() * ((31 - 1) + 1)); //Je génère un nombre aléatoire compris entre [1;31]
             nombreAleatoire -= 1;
