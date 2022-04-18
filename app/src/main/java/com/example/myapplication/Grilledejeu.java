@@ -47,20 +47,28 @@ public class Grilledejeu extends AppCompatActivity {
 
     private void majcodegrille(String code){
         int[] tab = new int[12];
+        int[] tabfinal = new int[12];
         int a = 0;
-        int k = 0;
 
         char[] temp = new char[12];
 
-        for(int i=0; i<12;i++){
+        for(int i=0; i<30;i++){
             temp[i] = code.charAt(i);
             tab[i] = Character.getNumericValue(temp[i]);
+        }
+
+        for(int i=0; i<30; i++){
+            if(tab[i] == 1){
+                tabfinal[a]=i;
+                a++;
+            }
         }
 
         for(int i=0; i<12; i++){
             a += tab[i]*((int) Math.pow(10,i));
         }
-        temp1.setText(tab[3]);
+
+        temp1.setText(String.valueOf(tabfinal[3]));
     }
 }
 
