@@ -3,18 +3,18 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Grilledejeu extends AppCompatActivity {
     private TextView temp1;
     private Button test;
+    private int nbrestant, categorie1, categorie2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,18 +25,23 @@ public class Grilledejeu extends AppCompatActivity {
         setContentView(R.layout.activity_grilledejeu);
 
         Bundle extras = getIntent().getExtras();
-        int categorie1 = extras.getInt("cat1"); // cela permet de recuperer la valeur de l'activité main
-        int categorie2 = extras.getInt("cat2");
+        categorie1 = extras.getInt("cat1"); // cela permet de recuperer la valeur de l'activité main
+        categorie2 = extras.getInt("cat2");
         String code = extras.getString("codegrille");
 
         temp1 = (TextView) findViewById(R.id.temp);
         test = (Button) findViewById(R.id.btn_test);
 
+        int[] tabposition = majcodegrille(code);
+        int nbcatrestant = nbrestant(tabposition);
+
+
+
         this.test.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-               majcodegrille(code);
+               int[] tabposition = majcodegrille(code);
             }});
 
 
@@ -45,30 +50,71 @@ public class Grilledejeu extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
 
-    private void majcodegrille(String code){
-        int[] tab = new int[12];
+    private int[] majcodegrille(String code){
         int[] tabfinal = new int[12];
         int a = 0;
 
-        char[] temp = new char[12];
-
-        for(int i=0; i<30;i++){
-            temp[i] = code.charAt(i);
-            tab[i] = Character.getNumericValue(temp[i]);
-        }
-
-        for(int i=0; i<30; i++){
-            if(tab[i] == 1){
+        for (int i=0; i<30; i++){ // rentre dans mon tableau uniquement les positions des images a afficher
+            if(code.charAt(i)=='1'){
                 tabfinal[a]=i;
                 a++;
             }
         }
 
-        for(int i=0; i<12; i++){
-            a += tab[i]*((int) Math.pow(10,i));
+        String aff = ""; //sert pour l'affichage des positions
+        for (int i=0; i<12; i++){
+            aff +=(","+tabfinal[i]);
         }
 
-        temp1.setText(String.valueOf(tabfinal[3]));
+        temp1.setText(aff);
+
+        return tabfinal;
+    }
+
+    private void afficherimage(ImageView img, int place){
+        int cat = categorie1;
+        if(place>=15){
+            place = place -15; //pour choisir dans la 2eme categorie
+            cat = categorie2; // la categorie ou l'on pioche nos images est passé a la 2eme categorie selectionnées
+        }
+        switch (cat){
+            case 1:
+                switch(place){
+                    case 0:
+                        //img.setImageResource((R.drawable.cate1_im1));
+                    case 1:
+                        //img.setImageResource((R.drawable.cate1_im2));
+                    case 2:
+                        //img.setImageResource((R.drawable.cate1_im3));
+                    case 3:
+                        //img.setImageResource((R.drawable.cate1_im4));
+
+                }
+            case 2:
+                switch(place){
+                    case 0:
+                        //img.setImageResource((R.drawable.cate2_im1));
+                    case 1:
+                        //img.setImageResource((R.drawable.cate2_im2));
+                    case 2:
+                        //img.setImageResource((R.drawable.cate2_im3));
+                    case 3:
+                        //img.setImageResource((R.drawable.cate2_im4));
+
+                }
+        }
+    }
+
+
+
+    private int nbrestant(int[] liste){
+        int nb=0;
+        for(int i=0; i<12; i++){
+            if (liste[i]<15){
+                nb ++;
+            }
+        }
+        return nb;
     }
 }
 
