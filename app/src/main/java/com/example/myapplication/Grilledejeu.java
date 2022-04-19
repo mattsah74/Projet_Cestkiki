@@ -33,7 +33,6 @@ public class Grilledejeu extends AppCompatActivity {
         test = (Button) findViewById(R.id.btn_test);
 
         int[] tabposition = majcodegrille(code);
-        int nbcatrestant = nbrestant(tabposition);
 
 
 
@@ -89,6 +88,7 @@ public class Grilledejeu extends AppCompatActivity {
                     case 3:
                         //img.setImageResource((R.drawable.cate1_im4));
 
+
                 }
             case 2:
                 switch(place){
@@ -107,16 +107,7 @@ public class Grilledejeu extends AppCompatActivity {
 
 
 
-    private int nbrestant(int[] liste){
-        int nb=0;
-        for(int i=0; i<12; i++){
-            if (liste[i]<15){
-                nb ++;
-            }
-        }
-        return nb;
-    }
-}
+
 
 
 
