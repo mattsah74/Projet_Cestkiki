@@ -105,73 +105,208 @@ public class Grilledejeu extends AppCompatActivity {
             place = place -15; //pour choisir dans la 2eme categorie
             cat = categorie2; // la categorie ou l'on pioche nos images est passé a la 2eme categorie selectionnées
         }
+        System.out.println("la cat est"+cat);
+        System.out.println("l'image est"+place);
         switch (cat){
             case 1:
                 switch(place){
                     case 0:
                         img.setImageResource((R.drawable.cat1_im1));
+                        break;
                     case 1:
                         img.setImageResource((R.drawable.cat1_im2));
+                        break;
                     case 2:
                         img.setImageResource((R.drawable.cat1_im3));
+                        break;
                     case 3:
                         img.setImageResource((R.drawable.cat1_im4));
+                        break;
                     case 4:
                         img.setImageResource((R.drawable.cat1_im5));
+                        break;
                     case 5:
                         img.setImageResource((R.drawable.cat1_im6));
+                        break;
                     case 6:
                         img.setImageResource((R.drawable.cat1_im7));
+                        break;
                     case 7:
                         img.setImageResource((R.drawable.cat1_im8));
+                        break;
                     case 8:
                         img.setImageResource((R.drawable.cat1_im9));
+                        break;
                     case 9:
                         img.setImageResource((R.drawable.cat1_im10));
+                        break;
                     case 10:
                         img.setImageResource((R.drawable.cat1_im11));
+                        break;
                     case 11:
                         img.setImageResource((R.drawable.cat1_im12));
+                        break;
                     case 12:
                         img.setImageResource((R.drawable.cat1_im13));
+                        break;
                     case 13:
                         img.setImageResource((R.drawable.cat1_im14));
+                        break;
                     case 14:
                         img.setImageResource((R.drawable.cat1_im15));
+                        break;
+
                 }
+                break;
             case 2:
                 switch(place){
                     case 0:
                         img.setImageResource((R.drawable.cat2_im1));
+                        break;
                     case 1:
                         img.setImageResource((R.drawable.cat2_im2));
+                        break;
                     case 2:
                         img.setImageResource((R.drawable.cat2_im3));
+                        break;
                     case 3:
                         img.setImageResource((R.drawable.cat2_im4));
+                        break;
                     case 4:
                         img.setImageResource((R.drawable.cat2_im5));
+                        break;
                     case 5:
                         img.setImageResource((R.drawable.cat2_im6));
+                        break;
                     case 6:
                         img.setImageResource((R.drawable.cat2_im7));
+                        break;
                     case 7:
                         img.setImageResource((R.drawable.cat2_im8));
+                        break;
                     case 8:
                         img.setImageResource((R.drawable.cat2_im9));
+                        break;
                     case 9:
                         img.setImageResource((R.drawable.cat2_im10));
+                        break;
                     case 10:
                         img.setImageResource((R.drawable.cat2_im11));
+                        break;
                     case 11:
                         img.setImageResource((R.drawable.cat2_im12));
+                        break;
                     case 12:
                         img.setImageResource((R.drawable.cat2_im13));
+                        break;
                     case 13:
                         img.setImageResource((R.drawable.cat2_im14));
+                        break;
                     case 14:
                         img.setImageResource((R.drawable.cat2_im15));
+                        break;
                 }
+                break;
+            case 3:
+                switch(place){
+                    case 0:
+                        img.setImageResource((R.drawable.cat3_im1));
+                        break;
+                    case 1:
+                        img.setImageResource((R.drawable.cat3_im2));
+                        break;
+                    case 2:
+                        img.setImageResource((R.drawable.cat3_im3));
+                        break;
+                    case 3:
+                        img.setImageResource((R.drawable.cat3_im4));
+                        break;
+                    case 4:
+                        img.setImageResource((R.drawable.cat3_im5));
+                        break;
+                    case 5:
+                        img.setImageResource((R.drawable.cat3_im6));
+                        break;
+                    case 6:
+                        img.setImageResource((R.drawable.cat3_im7));
+                        break;
+                    case 7:
+                        img.setImageResource((R.drawable.cat3_im8));
+                        break;
+                    case 8:
+                        img.setImageResource((R.drawable.cat3_im9));
+                        break;
+                    case 9:
+                        img.setImageResource((R.drawable.cat3_im10));
+                        break;
+                    case 10:
+                        img.setImageResource((R.drawable.cat3_im11));
+                        break;
+                    case 11:
+                        img.setImageResource((R.drawable.cat3_im12));
+                        break;
+                    case 12:
+                        img.setImageResource((R.drawable.cat3_im13));
+                        break;
+                    case 13:
+                        img.setImageResource((R.drawable.cat3_im14));
+                        break;
+                    case 14:
+                        img.setImageResource((R.drawable.cat3_im15));
+                        break;
+                }
+                break;
+            case 4:
+                switch(place){
+                    case 0:
+                        img.setImageResource((R.drawable.cat4_im1));
+                        break;
+                    case 1:
+                        img.setImageResource((R.drawable.cat4_im2));
+                        break;
+                    case 2:
+                        img.setImageResource((R.drawable.cat4_im3));
+                        break;
+                    case 3:
+                        img.setImageResource((R.drawable.cat4_im4));
+                        break;
+                    case 4:
+                        img.setImageResource((R.drawable.cat4_im5));
+                        break;
+                    case 5:
+                        img.setImageResource((R.drawable.cat4_im6));
+                        break;
+                    case 6:
+                        img.setImageResource((R.drawable.cat4_im7));
+                        break;
+                    case 7:
+                        img.setImageResource((R.drawable.cat4_im8));
+                        break;
+                    case 8:
+                        img.setImageResource((R.drawable.cat4_im9));
+                        break;
+                    case 9:
+                        img.setImageResource((R.drawable.cat4_im10));
+                        break;
+                    case 10:
+                        img.setImageResource((R.drawable.cat4_im11));
+                        break;
+                    case 11:
+                        img.setImageResource((R.drawable.cat4_im12));
+                        break;
+                    case 12:
+                        img.setImageResource((R.drawable.cat4_im13));
+                        break;
+                    case 13:
+                        img.setImageResource((R.drawable.cat4_im14));
+                        break;
+                    case 14:
+                        img.setImageResource((R.drawable.cat4_im15));
+                        break;
+                }
+                break;
         }
-    }}
+    }
+
+}
 
