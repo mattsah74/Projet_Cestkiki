@@ -26,7 +26,7 @@ public class MainActivity<image1> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.imageView = (ImageView) this.findViewById(R.id.imageView8);
+        this.imageView = (ImageView) this.findViewById(R.id.imageView4);
 
         this.button = (Button) this.findViewById(R.id.button);
         this.button2 = (Button) this.findViewById(R.id.button2);
@@ -48,7 +48,7 @@ public class MainActivity<image1> extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                imageView.setAlpha(0.5f);
 
                 showImage1();
             }

@@ -14,7 +14,8 @@ import android.widget.TextView;
 public class Grilledejeu extends AppCompatActivity {
     private TextView temp1;
     private Button test;
-    private int nbrestant, categorie1, categorie2;
+    private int categorie1, categorie2;
+    private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,33 @@ public class Grilledejeu extends AppCompatActivity {
         test = (Button) findViewById(R.id.btn_test);
 
         int[] tabposition = majcodegrille(code);
+        img1 = (ImageView) findViewById(R.id.img1);
+        img2 = (ImageView) findViewById(R.id.img2);
+        img3 = (ImageView) findViewById(R.id.img3);
+        img4 = (ImageView) findViewById(R.id.img4);
+        img5 = (ImageView) findViewById(R.id.img5);
+        img6 = (ImageView) findViewById(R.id.img6);
+        img7 = (ImageView) findViewById(R.id.img7);
+        img8 = (ImageView) findViewById(R.id.img8);
+        img9 = (ImageView) findViewById(R.id.img9);
+        img10 = (ImageView) findViewById(R.id.img10);
+        img11 = (ImageView) findViewById(R.id.img11);
+        img12 = (ImageView) findViewById(R.id.img12);
+
+        afficherimage(img1,tabposition[0]);
+        afficherimage(img2,tabposition[1]);
+        afficherimage(img3,tabposition[2]);
+        afficherimage(img4,tabposition[3]);
+        afficherimage(img5,tabposition[4]);
+        afficherimage(img6,tabposition[5]);
+        afficherimage(img7,tabposition[6]);
+        afficherimage(img8,tabposition[7]);
+        afficherimage(img9,tabposition[8]);
+        afficherimage(img10,tabposition[9]);
+        afficherimage(img11,tabposition[10]);
+        afficherimage(img12,tabposition[11]);
+
+
 
 
 
@@ -41,6 +69,7 @@ public class Grilledejeu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                int[] tabposition = majcodegrille(code);
+               // img.setAlpha(0-250);
             }});
 
 
@@ -80,43 +109,69 @@ public class Grilledejeu extends AppCompatActivity {
             case 1:
                 switch(place){
                     case 0:
-                        //img.setImageResource((R.drawable.cate1_im1));
+                        img.setImageResource((R.drawable.cat1_im1));
                     case 1:
-                        //img.setImageResource((R.drawable.cate1_im2));
+                        img.setImageResource((R.drawable.cat1_im2));
                     case 2:
-                        //img.setImageResource((R.drawable.cate1_im3));
+                        img.setImageResource((R.drawable.cat1_im3));
                     case 3:
-                        //img.setImageResource((R.drawable.cate1_im4));
-
-
+                        img.setImageResource((R.drawable.cat1_im4));
+                    case 4:
+                        img.setImageResource((R.drawable.cat1_im5));
+                    case 5:
+                        img.setImageResource((R.drawable.cat1_im6));
+                    case 6:
+                        img.setImageResource((R.drawable.cat1_im7));
+                    case 7:
+                        img.setImageResource((R.drawable.cat1_im8));
+                    case 8:
+                        img.setImageResource((R.drawable.cat1_im9));
+                    case 9:
+                        img.setImageResource((R.drawable.cat1_im10));
+                    case 10:
+                        img.setImageResource((R.drawable.cat1_im11));
+                    case 11:
+                        img.setImageResource((R.drawable.cat1_im12));
+                    case 12:
+                        img.setImageResource((R.drawable.cat1_im13));
+                    case 13:
+                        img.setImageResource((R.drawable.cat1_im14));
+                    case 14:
+                        img.setImageResource((R.drawable.cat1_im15));
                 }
             case 2:
                 switch(place){
                     case 0:
-                        //img.setImageResource((R.drawable.cate2_im1));
+                        img.setImageResource((R.drawable.cat2_im1));
                     case 1:
-                        //img.setImageResource((R.drawable.cate2_im2));
+                        img.setImageResource((R.drawable.cat2_im2));
                     case 2:
-                        //img.setImageResource((R.drawable.cate2_im3));
+                        img.setImageResource((R.drawable.cat2_im3));
                     case 3:
-                        //img.setImageResource((R.drawable.cate2_im4));
-
+                        img.setImageResource((R.drawable.cat2_im4));
+                    case 4:
+                        img.setImageResource((R.drawable.cat2_im5));
+                    case 5:
+                        img.setImageResource((R.drawable.cat2_im6));
+                    case 6:
+                        img.setImageResource((R.drawable.cat2_im7));
+                    case 7:
+                        img.setImageResource((R.drawable.cat2_im8));
+                    case 8:
+                        img.setImageResource((R.drawable.cat2_im9));
+                    case 9:
+                        img.setImageResource((R.drawable.cat2_im10));
+                    case 10:
+                        img.setImageResource((R.drawable.cat2_im11));
+                    case 11:
+                        img.setImageResource((R.drawable.cat2_im12));
+                    case 12:
+                        img.setImageResource((R.drawable.cat2_im13));
+                    case 13:
+                        img.setImageResource((R.drawable.cat2_im14));
+                    case 14:
+                        img.setImageResource((R.drawable.cat2_im15));
                 }
         }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }}
 
