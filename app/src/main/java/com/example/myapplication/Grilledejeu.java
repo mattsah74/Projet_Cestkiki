@@ -48,17 +48,18 @@ public class Grilledejeu extends AppCompatActivity {
         img12 = (ImageView) findViewById(R.id.img12);
 
         afficherimage(img1,tabposition[0]);
-        afficherimage(img2,tabposition[1]);
-        afficherimage(img3,tabposition[2]);
-        afficherimage(img4,tabposition[3]);
-        afficherimage(img5,tabposition[4]);
-        afficherimage(img6,tabposition[5]);
-        afficherimage(img7,tabposition[6]);
-        afficherimage(img8,tabposition[7]);
-        afficherimage(img9,tabposition[8]);
-        afficherimage(img10,tabposition[9]);
+        afficherimage(img2,tabposition[3]);
+        afficherimage(img3,tabposition[5]);
+        afficherimage(img4,tabposition[7]);
+        afficherimage(img5,tabposition[9]);
+        afficherimage(img6,tabposition[11]);
+
+        afficherimage(img7,tabposition[2]);
+        afficherimage(img8,tabposition[4]);
+        afficherimage(img9,tabposition[6]);
+        afficherimage(img10,tabposition[8]);
         afficherimage(img11,tabposition[10]);
-        afficherimage(img12,tabposition[11]);
+        afficherimage(img12,tabposition[12]);
 
 
 
@@ -68,10 +69,93 @@ public class Grilledejeu extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-               int[] tabposition = majcodegrille(code);
-               // img.setAlpha(0-250);
+
             }});
 
+
+        this.img1.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img1);
+            }});
+
+        this.img2.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img2);
+            }});
+
+        this.img3.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img3);
+            }});
+
+        this.img4.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img4);
+            }});
+
+        this.img5.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img5);
+            }});
+
+        this.img6.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img6);
+            }});
+
+        this.img7.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img7);
+            }});
+
+        this.img8.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img8);
+            }});
+
+        this.img9.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img9);
+            }});
+
+        this.img10.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img10);
+            }});
+
+        this.img11.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img11);
+            }});
+
+        this.img12.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                transpa(img12);
+            }});
 
     }
 
@@ -93,8 +177,6 @@ public class Grilledejeu extends AppCompatActivity {
         for (int i=0; i<12; i++){
             aff +=(","+tabfinal[i]);
         }
-
-        temp1.setText(aff);
 
         return tabfinal;
     }
@@ -306,6 +388,16 @@ public class Grilledejeu extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+    private void transpa(ImageView img){
+        /*if(img.getAlpha() == 1.0f){
+            img.setAlpha(0.7f); // jessaye de coomprendre l'opacite si c'est plus ou moins
+        }
+        else if(img.getAlpha() == 0f){
+            img.setAlpha(0.1f); // jessaye de coomprendre l'opacite si c'est plus ou moins
+        }*/
+        img.setAlpha(0.7f);
     }
 
 }

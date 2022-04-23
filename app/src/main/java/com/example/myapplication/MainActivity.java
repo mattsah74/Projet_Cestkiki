@@ -2,7 +2,10 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -32,6 +35,8 @@ public class MainActivity<image1> extends AppCompatActivity {
         this.button2 = (Button) this.findViewById(R.id.button2);
 
 
+
+
         this.button.setOnClickListener(new Button.OnClickListener() {
 
             @Override
@@ -48,9 +53,7 @@ public class MainActivity<image1> extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                imageView.setAlpha(0.5f);
-
-                showImage1();
+                //this.setBackgroundColor(Color.parseColor("#2596be");;
             }
         });
 
