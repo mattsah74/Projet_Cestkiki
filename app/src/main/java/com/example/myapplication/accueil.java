@@ -12,9 +12,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class accueil extends AppCompatActivity {
     private Button cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8, jouer;
-    private TextView txt1, txt2, txterreur;
+    private TextView txterreur, affichcate;
 
     int tour = 0; // utilisé pour rentrer les caté selectionne dans rajoutcate
 
@@ -27,18 +29,10 @@ public class accueil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
-
-        Bundle extras = getIntent().getExtras();
-        String value = extras.getString("code"); // cela permet de recuperer la valeur de l'activité main
-
-
         int [] cateselec = {0, 0};
 
-
-
-        txt1 = (TextView) findViewById(R.id.txt_cat1);
-        txt2 = (TextView) findViewById(R.id.txt_cat2);
         txterreur = (TextView) findViewById(R.id.txt_erreur);
+        affichcate = (TextView) findViewById(R.id.affichcate);
 
         this.cat1 = (Button) this.findViewById(R.id.cat1);
         this.cat2 = (Button) this.findViewById(R.id.cat2);
@@ -56,10 +50,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 1);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
-
+                majcat(cateselec);
             }});
 
 
@@ -68,10 +59,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 2);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
-
+                majcat(cateselec);
             }});
 
         this.cat3.setOnClickListener(new Button.OnClickListener() {
@@ -79,10 +67,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 3);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
-
+                majcat(cateselec);
             }});
 
         this.cat4.setOnClickListener(new Button.OnClickListener() {
@@ -90,9 +75,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 4);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
+                majcat(cateselec);
 
             }});
 
@@ -101,9 +84,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 5);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
+                majcat(cateselec);
 
             }});
 
@@ -112,9 +93,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 6);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
+                majcat(cateselec);
 
             }});
 
@@ -123,10 +102,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 7);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
-
+                majcat(cateselec);
             }});
 
         this.cat8.setOnClickListener(new Button.OnClickListener() {
@@ -134,10 +110,7 @@ public class accueil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rajoutcate(cateselec, 8);
-                txt1.setText(String.valueOf(cateselec[0]));
-                txt2.setText(String.valueOf(cateselec[1]));
-                int test = majcat(cateselec);
-
+                majcat(cateselec);
             }});
 
         this.jouer.setOnClickListener(new Button.OnClickListener(){
@@ -183,9 +156,67 @@ public class accueil extends AppCompatActivity {
 
     }
 
-    private int majcat(int[] tab){  // fonctionn qui modifie le tableau pour le maj dans le cloud
-        int tabfinal;
-        tabfinal = 10*tab[0] + tab[1];
-        return tabfinal;
+    private void majcat(int[] cate){  // fonction qui modifie le tableau pour le maj dans le cloud
+        String[] tab = new String[2];
+        switch(cate[0]){
+            case 0:
+                tab[1]= " ";
+                tab[0]= " ";
+                break;
+            case 1:
+                tab[0]= "acteur";
+                break;
+            case 2:
+                tab[0]= "rappeur";
+                break;
+            case 3:
+                tab[0]= "footballeur";
+                break;
+            case 4:;
+                tab[0]= "manga / anime";
+                break;
+            case 5:
+                tab[0]= "autres";
+                break;
+            case 6:
+                tab[0]= "autres";
+                break;
+            case 7:
+                tab[0]= "autres";
+                break;
+            case 8:
+                tab[0]= "autres";
+                break;
+        }
+        switch(cate[1]){
+            case 0:
+                tab[1]= "encore une autre ?";
+                break;
+            case 1:
+                tab[1]= "acteur.";
+                break;
+            case 2:
+                tab[1]= "rappeur.";
+                break;
+            case 3:
+                tab[1]= "footballeur.";
+                break;
+            case 4:;
+                tab[1]= "manga / anime.";
+                break;
+            case 5:
+                tab[1]= "autres.";
+                break;
+            case 6:
+                tab[1]= "autres.";
+                break;
+            case 7:
+                tab[1]= "autres.";
+                break;
+            case 8:
+                tab[1]= "autres.";
+                break;
+        }
+        affichcate.setText("Vous avez choisi les catégories: "+tab[0]+" et "+tab[1]);
     }
 }

@@ -48,29 +48,20 @@ public class Grilledejeu extends AppCompatActivity {
         img12 = (ImageView) findViewById(R.id.img12);
 
         afficherimage(img1,tabposition[0]);
-        afficherimage(img2,tabposition[3]);
-        afficherimage(img3,tabposition[5]);
-        afficherimage(img4,tabposition[7]);
-        afficherimage(img5,tabposition[9]);
-        afficherimage(img6,tabposition[11]);
+        afficherimage(img8,tabposition[1]);
+        afficherimage(img3,tabposition[2]);
+        afficherimage(img10,tabposition[3]);
+        afficherimage(img5,tabposition[4]);
+        afficherimage(img12,tabposition[5]);
 
-        afficherimage(img7,tabposition[2]);
-        afficherimage(img8,tabposition[4]);
-        afficherimage(img9,tabposition[6]);
-        afficherimage(img10,tabposition[8]);
-        afficherimage(img11,tabposition[10]);
-        afficherimage(img12,tabposition[12]);
-
-
+        afficherimage(img6,tabposition[6]);
+        afficherimage(img7,tabposition[7]);
+        afficherimage(img9,tabposition[8]);
+        afficherimage(img2,tabposition[9]);
+        afficherimage(img4,tabposition[10]);
+        afficherimage(img11,tabposition[11]);
 
 
-
-        test.setOnClickListener(new Button.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-            }});
 
 
         img1.setOnClickListener(new Button.OnClickListener() {
@@ -177,6 +168,7 @@ public class Grilledejeu extends AppCompatActivity {
         for (int i=0; i<12; i++){
             aff +=(","+tabfinal[i]);
         }
+        //temp1.setText(""+aff);
 
         return tabfinal;
     }
