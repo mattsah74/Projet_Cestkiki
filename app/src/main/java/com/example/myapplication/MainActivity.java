@@ -12,10 +12,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MainActivity<image1> extends AppCompatActivity {
     private ImageView imageView;
+    private TextView opacite;
     private Button button;
     private Button button2;
 
@@ -30,6 +32,7 @@ public class MainActivity<image1> extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.imageView = (ImageView) this.findViewById(R.id.imageView4);
+        this.opacite = (TextView) this.findViewById(R.id.opacite);
 
         this.button = (Button) this.findViewById(R.id.button);
         this.button2 = (Button) this.findViewById(R.id.button2);
@@ -49,11 +52,23 @@ public class MainActivity<image1> extends AppCompatActivity {
                 //showImage1();
             }
         });
+
         this.button2.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 //this.setBackgroundColor(Color.parseColor("#2596be");;
+                float opac = imageView.getAlpha();
+                if (opac == 1.0f){
+                    imageView.setAlpha(0.4f);
+                    opac = imageView.getAlpha();
+                    opacite.setText("Opacité : "+(opac));
+                }
+                else if(opac == 0.4f){
+                    imageView.setAlpha(1.0f);
+                    opac = imageView.getAlpha();
+                    opacite.setText("Opacité : "+(opac));
+                }
             }
         });
 

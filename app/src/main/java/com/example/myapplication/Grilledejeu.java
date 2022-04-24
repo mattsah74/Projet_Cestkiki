@@ -65,7 +65,7 @@ public class Grilledejeu extends AppCompatActivity {
 
 
 
-        this.test.setOnClickListener(new Button.OnClickListener() {
+        test.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -73,7 +73,7 @@ public class Grilledejeu extends AppCompatActivity {
             }});
 
 
-        this.img1.setOnClickListener(new Button.OnClickListener() {
+        img1.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -391,13 +391,13 @@ public class Grilledejeu extends AppCompatActivity {
     }
 
     private void transpa(ImageView img){
-        /*if(img.getAlpha() == 1.0f){
-            img.setAlpha(0.7f); // jessaye de coomprendre l'opacite si c'est plus ou moins
+        float opac = img.getAlpha();
+        if (opac == 1.0f){
+            img.setAlpha(0.4f);
         }
-        else if(img.getAlpha() == 0f){
-            img.setAlpha(0.1f); // jessaye de coomprendre l'opacite si c'est plus ou moins
-        }*/
-        img.setAlpha(0.7f);
+        else if(opac == 0.4f){
+            img.setAlpha(1.0f);
+        }
     }
 
 }
