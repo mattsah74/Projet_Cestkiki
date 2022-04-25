@@ -30,8 +30,6 @@ public class Grilledejeu extends AppCompatActivity {
         categorie2 = extras.getInt("cat2");
         String code = extras.getString("codegrille");
 
-        temp1 = (TextView) findViewById(R.id.temp);
-        test = (Button) findViewById(R.id.btn_test);
 
         int[] tabposition = majcodegrille(code);
         img1 = (ImageView) findViewById(R.id.img1);
@@ -376,6 +374,55 @@ public class Grilledejeu extends AppCompatActivity {
                         break;
                     case 14:
                         img.setImageResource((R.drawable.cat4_im15));
+                        break;
+                }
+                break;
+            case 5:
+                switch(place){
+                    case 0:
+                        img.setImageResource((R.drawable.cat5_im1));
+                        break;
+                    case 1:
+                        img.setImageResource((R.drawable.cat5_im2));
+                        break;
+                    case 2:
+                        img.setImageResource((R.drawable.cat5_im3));
+                        break;
+                    case 3:
+                        img.setImageResource((R.drawable.cat5_im4));
+                        break;
+                    case 4:
+                        img.setImageResource((R.drawable.cat5_im5));
+                        break;
+                    case 5:
+                        img.setImageResource((R.drawable.cat5_im6));
+                        break;
+                    case 6:
+                        img.setImageResource((R.drawable.cat5_im7));
+                        break;
+                    case 7:
+                        img.setImageResource((R.drawable.cat5_im8));
+                        break;
+                    case 8:
+                        img.setImageResource((R.drawable.cat5_im9));
+                        break;
+                    case 9:
+                        img.setImageResource((R.drawable.cat5_im10));
+                        break;
+                    case 10:
+                        img.setImageResource((R.drawable.cat5_im11));
+                        break;
+                    case 11:
+                        img.setImageResource((R.drawable.cat5_im12));
+                        break;
+                    case 12:
+                        img.setImageResource((R.drawable.cat5_im13));
+                        break;
+                    case 13:
+                        img.setImageResource((R.drawable.cat5_im14));
+                        break;
+                    case 14:
+                        img.setImageResource((R.drawable.cat5_im15));
                         break;
                 }
                 break;

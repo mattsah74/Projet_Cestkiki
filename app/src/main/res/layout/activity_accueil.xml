@@ -126,7 +126,7 @@
         android:layout_width="188dp"
         android:layout_height="59dp"
         android:layout_marginTop="10dp"
-        android:text="Categorie 5"
+        android:text="Sportifs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.301"
@@ -149,8 +149,8 @@
 
     <Button
         android:id="@+id/btn_jouer"
-        android:layout_width="128dp"
-        android:layout_height="68dp"
+        android:layout_width="155dp"
+        android:layout_height="64dp"
         android:text="Jouer"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -176,7 +176,7 @@ public class accueil extends AppCompatActivity {
                 tab[0]= "manga / anime";
                 break;
             case 5:
-                tab[0]= "autres";
+                tab[0]= "sportifs";
                 break;
             case 6:
                 tab[0]= "autres";
@@ -205,7 +205,7 @@ public class accueil extends AppCompatActivity {
                 tab[1]= "manga / anime.";
                 break;
             case 5:
-                tab[1]= "autres.";
+                tab[1]= "sportifs.";
                 break;
             case 6:
                 tab[1]= "autres.";
