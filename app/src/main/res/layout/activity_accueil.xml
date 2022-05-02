@@ -7,20 +7,6 @@
     tools:context=".accueil">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="352dp"
-        android:layout_height="55dp"
-        android:text="Sélectionnez 2 catégories"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:textSize="24sp" />
-
-    <TextView
         android:id="@+id/txt_erreur"
         android:layout_width="677dp"
         android:layout_height="35dp"
@@ -34,41 +20,28 @@
 
     <TextView
         android:id="@+id/affichcate"
-        android:layout_width="589dp"
-        android:layout_height="40dp"
+        android:layout_width="823dp"
+        android:layout_height="38dp"
         android:text="Vous avez choisi les catégories:           et    "
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <Button
-        android:id="@+id/cat2"
+        android:id="@+id/cat1"
         android:layout_width="188dp"
         android:layout_height="59dp"
-        android:text="Rappeurs"
+        android:text="Acteurs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.156" />
-
-    <Button
-        android:id="@+id/cat8"
-        android:layout_width="188dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="2dp"
-        android:text="Categorie 8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
 
     <Button
         android:id="@+id/cat4"
@@ -78,48 +51,24 @@
         android:text="Anime / manga"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.324" />
 
-    <Button
-        android:id="@+id/cat7"
-        android:layout_width="188dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="2dp"
-        android:text="Categorie 7"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="352dp"
+        android:layout_height="55dp"
+        android:text="Sélectionnez 2 catégories"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
-
-    <Button
-        android:id="@+id/cat6"
-        android:layout_width="188dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="10dp"
-        android:text="Categorie 6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
-
-    <Button
-        android:id="@+id/cat1"
-        android:layout_width="188dp"
-        android:layout_height="59dp"
-        android:text="Acteurs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:textSize="24sp" />
 
     <Button
         android:id="@+id/cat5"
@@ -129,7 +78,33 @@
         android:text="Sportifs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/cat2"
+        android:layout_width="188dp"
+        android:layout_height="59dp"
+        android:text="Rappeurs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <Button
+        android:id="@+id/cat6"
+        android:layout_width="188dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="10dp"
+        android:text="Youtuber / Streamer"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52" />
@@ -142,10 +117,36 @@
         android:text="Footballeurs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.324" />
+
+    <Button
+        android:id="@+id/cat7"
+        android:layout_width="188dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="2dp"
+        android:text="Personnage de films"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
+
+    <Button
+        android:id="@+id/cat8"
+        android:layout_width="188dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="2dp"
+        android:text="Acteurs X"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728" />
 
     <Button
         android:id="@+id/btn_jouer"
@@ -155,10 +156,10 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"

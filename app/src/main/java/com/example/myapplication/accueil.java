@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -51,6 +52,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 1);
                 majcat(cateselec);
+                majim(cateselec);
             }});
 
 
@@ -60,6 +62,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 2);
                 majcat(cateselec);
+                majim(cateselec);
             }});
 
         this.cat3.setOnClickListener(new Button.OnClickListener() {
@@ -68,6 +71,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 3);
                 majcat(cateselec);
+                majim(cateselec);
             }});
 
         this.cat4.setOnClickListener(new Button.OnClickListener() {
@@ -76,7 +80,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 4);
                 majcat(cateselec);
-
+                majim(cateselec);
             }});
 
         this.cat5.setOnClickListener(new Button.OnClickListener() {
@@ -85,7 +89,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 5);
                 majcat(cateselec);
-
+                majim(cateselec);
             }});
 
         this.cat6.setOnClickListener(new Button.OnClickListener() {
@@ -94,7 +98,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 6);
                 majcat(cateselec);
-
+                majim(cateselec);
             }});
 
         this.cat7.setOnClickListener(new Button.OnClickListener() {
@@ -103,6 +107,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 7);
                 majcat(cateselec);
+                majim(cateselec);
             }});
 
         this.cat8.setOnClickListener(new Button.OnClickListener() {
@@ -111,6 +116,7 @@ public class accueil extends AppCompatActivity {
             public void onClick(View v) {
                 rajoutcate(cateselec, 8);
                 majcat(cateselec);
+                majim(cateselec);
             }});
 
         this.jouer.setOnClickListener(new Button.OnClickListener(){
@@ -138,7 +144,7 @@ public class accueil extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void rajoutcate(int[] tab, int cat){  // fonction qui nous maj notre tableau avec les categories selectionnées
 
-        if (tour==0){
+        /*if (tour==0){
             if(tab[0] != cat && tab[1] != cat){
                 tab[0] = cat;
                 tour = 1;
@@ -152,6 +158,13 @@ public class accueil extends AppCompatActivity {
             }else{
                 txterreur.setText("Vous ne pouvez pas selectionner les 2 mêmes catégories");
             }
+        }*/
+        if (tour==0){
+            tab[0] = cat;
+            tour = 1;
+        }else{
+            tab[1] = cat;
+            tour = 0;
         }
 
     }
@@ -179,13 +192,13 @@ public class accueil extends AppCompatActivity {
                 tab[0]= "sportifs";
                 break;
             case 6:
-                tab[0]= "autres";
+                tab[0]= "youtubeurs / streamers";
                 break;
             case 7:
-                tab[0]= "autres";
+                tab[0]= "personnages de film";
                 break;
             case 8:
-                tab[0]= "autres";
+                tab[0]= "acteurs X";
                 break;
         }
         switch(cate[1]){
@@ -208,15 +221,54 @@ public class accueil extends AppCompatActivity {
                 tab[1]= "sportifs.";
                 break;
             case 6:
-                tab[1]= "autres.";
+                tab[1]= "youtubeurs / streamer.";
                 break;
             case 7:
-                tab[1]= "autres.";
+                tab[1]= "personnages de film.";
                 break;
             case 8:
-                tab[1]= "autres.";
+                tab[1]= "acteurs X.";
                 break;
         }
-        affichcate.setText("Vous avez choisi les catégories: "+tab[0]+" et "+tab[1]);
+        affichcate.setText("Vous avez choisi : "+tab[0]+" et "+tab[1]);
+    }
+    private void majim (int[] tab){
+        cat1.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat2.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat3.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat4.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat5.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat6.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat7.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat8.setBackgroundColor(Color.parseColor("#bb86fc"));
+
+        for(int i=0; i<2; i++){
+            switch (tab[i]){
+                case 1:
+                    cat1.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 2:
+                    cat2.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 3:
+                    cat3.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 4:
+                    cat4.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 5:
+                    cat5.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 6:
+                    cat6.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 7:
+                    cat7.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+                case 8:
+                    cat8.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    break;
+            }
+        }
     }
 }
