@@ -16,6 +16,8 @@ public class Grilledejeu extends AppCompatActivity {
     private Button test;
     private int categorie1, categorie2;
     private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12;
+    private ImageView eto1, eto2, eto3, eto4,eto5, eto6, eto7, eto8, eto9, eto10, eto11, eto12 ;
+    private int debut =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,22 @@ public class Grilledejeu extends AppCompatActivity {
         img11 = (ImageView) findViewById(R.id.img11);
         img12 = (ImageView) findViewById(R.id.img12);
 
+        eto1 = (ImageView) findViewById(R.id.eto1);
+        eto2 = (ImageView) findViewById(R.id.eto2);
+        eto3 = (ImageView) findViewById(R.id.eto3);
+        eto4 = (ImageView) findViewById(R.id.eto4);
+        eto5 = (ImageView) findViewById(R.id.eto5);
+        eto6 = (ImageView) findViewById(R.id.eto6);
+        eto7 = (ImageView) findViewById(R.id.eto7);
+        eto8 = (ImageView) findViewById(R.id.eto8);
+        eto9 = (ImageView) findViewById(R.id.eto9);
+        eto10 = (ImageView) findViewById(R.id.eto10);
+        eto11 = (ImageView) findViewById(R.id.eto11);
+        eto12 = (ImageView) findViewById(R.id.eto12);
+
+
+
+
         afficherimage(img1,tabposition[0]);
         afficherimage(img8,tabposition[1]);
         afficherimage(img3,tabposition[2]);
@@ -66,84 +84,84 @@ public class Grilledejeu extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                transpa(img1);
+                transpa(img1,1);
             }});
 
         this.img2.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img2);
+                transpa(img2,2);
             }});
 
         this.img3.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img3);
+                transpa(img3,3);
             }});
 
         this.img4.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img4);
+                transpa(img4,4);
             }});
 
         this.img5.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img5);
+                transpa(img5,5);
             }});
 
         this.img6.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img6);
+                transpa(img6,6);
             }});
 
         this.img7.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img7);
+                transpa(img7,7);
             }});
 
         this.img8.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img8);
+                transpa(img8,8);
             }});
 
         this.img9.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img9);
+                transpa(img9,9);
             }});
 
         this.img10.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img10);
+                transpa(img10,10);
             }});
 
         this.img11.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img11);
+                transpa(img11,11);
             }});
 
         this.img12.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                transpa(img12);
+                transpa(img12,12);
             }});
 
     }
@@ -576,7 +594,49 @@ public class Grilledejeu extends AppCompatActivity {
         }
     }
 
-    private void transpa(ImageView img){
+    private void transpa(ImageView img, int a){
+        if (debut ==0){
+            switch(a){
+                case 1:
+                    eto1.setVisibility(View.VISIBLE);
+                    break;
+                case 2:
+                    eto2.setVisibility(View.VISIBLE);
+                    break;
+                case 3:
+                    eto3.setVisibility(View.VISIBLE);
+                    break;
+                case 4:
+                    eto4.setVisibility(View.VISIBLE);
+                    break;
+                case 5:
+                    eto5.setVisibility(View.VISIBLE);
+                    break;
+                case 6:
+                    eto6.setVisibility(View.VISIBLE);
+                    break;
+                case 7:
+                    eto7.setVisibility(View.VISIBLE);
+                    break;
+                case 8:
+                    eto8.setVisibility(View.VISIBLE);
+                    break;
+                case 9:
+                    eto9.setVisibility(View.VISIBLE);
+                    break;
+                case 10:
+                    eto10.setVisibility(View.VISIBLE);
+                    break;
+                case 11:
+                    eto11.setVisibility(View.VISIBLE);
+                    break;
+                case 12:
+                    eto12.setVisibility(View.VISIBLE);
+
+            }
+
+        }
+        debut = 1;
         float opac = img.getAlpha();
         if (opac == 1.0f){
             img.setAlpha(0.4f);
