@@ -46,6 +46,11 @@ public class accueil extends AppCompatActivity {
         this.jouer = (Button) this.findViewById(R.id.btn_jouer);
 
 
+        /*View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);*/
+
+
         this.cat1.setOnClickListener(new Button.OnClickListener() {
 
             @Override

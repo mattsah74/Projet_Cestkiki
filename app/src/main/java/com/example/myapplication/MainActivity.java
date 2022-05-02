@@ -18,16 +18,33 @@ import android.widget.TextView;
 public class MainActivity<image1> extends AppCompatActivity {
     private Button button;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Cette directive enlève la barre de titre
+        //Enlève la barre de titre
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-// Cette directive permet d'enlever la barre de notifications pour afficher l'application en plein écran
+        // Enlever la barre de notifications pour afficher l'application en plein écran
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//On définit le contenu de la vue APRES les instructions précédentes pour éviter un cr
+        //On définit le contenu de la vue APRES les instructions précédentes pour éviter un cr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        /*
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility) {
+                // Note that system bars will only be "visible" if none of the
+                // LOW_PROFILE, HIDE_NAVIGATION, or FULLSCREEN flags are set.
+                if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
+                    int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+                    decorView.setSystemUiVisibility(uiOptions);
+                }
+            }
+        });*/
 
 
         this.button = (Button) this.findViewById(R.id.button);

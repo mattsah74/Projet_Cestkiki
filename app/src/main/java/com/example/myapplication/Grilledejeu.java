@@ -77,7 +77,9 @@ public class Grilledejeu extends AppCompatActivity {
         afficherimage(img4,tabposition[10]);
         afficherimage(img11,tabposition[11]);
 
-
+        /*View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);*/
 
 
         img1.setOnClickListener(new Button.OnClickListener() {
@@ -634,15 +636,16 @@ public class Grilledejeu extends AppCompatActivity {
                     eto12.setVisibility(View.VISIBLE);
 
             }
-
+            debut = 1;
         }
-        debut = 1;
-        float opac = img.getAlpha();
-        if (opac == 1.0f){
-            img.setAlpha(0.4f);
-        }
-        else if(opac == 0.4f){
-            img.setAlpha(1.0f);
+        else{
+            float opac = img.getAlpha();
+            if (opac == 1.0f){
+                img.setAlpha(0.4f);
+            }
+            else if(opac == 0.4f){
+                img.setAlpha(1.0f);
+            }
         }
     }
 

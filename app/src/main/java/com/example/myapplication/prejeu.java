@@ -40,6 +40,9 @@ public class prejeu extends AppCompatActivity {
         code_grille = creercode();
         txt1.setText(code_grille);
 
+        /*View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);*/
 
 
 
