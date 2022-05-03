@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 
 public class MainActivity<image1> extends AppCompatActivity {
-    private Button button;
+    private Button button, regle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,18 @@ public class MainActivity<image1> extends AppCompatActivity {
 
 
         this.button.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, accueil.class);
+                startActivity(i);
+            }
+        });
+
+        this.regle = (Button) this.findViewById(R.id.regle);
+
+
+        this.regle.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {

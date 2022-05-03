@@ -56,7 +56,6 @@ public class prejeu extends AppCompatActivity {
                 a.putExtra("cat2", categorie2);
                 a.putExtra("codegrille", code_grille);
                 startActivity(a);
-
             }});
 
         this.rejoindre.setOnClickListener(new Button.OnClickListener() {
