@@ -54,7 +54,7 @@ public class MainActivity<image1> extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, accueil.class);
+                Intent i = new Intent(MainActivity.this, Regle.class);
                 startActivity(i);
             }
         });

@@ -66,7 +66,6 @@ public class prejeu extends AppCompatActivity {
                 if (String.valueOf(txt2.getText()) !=""){
                     String code = String.valueOf(txt2.getText());
                     code_grille = coderejoindre(code);
-                    txt1.setText(code_grille);
                     Intent a = new Intent(prejeu.this, Grilledejeu.class);
                     a.putExtra("cat1",categorie1);
                     a.putExtra("cat2", categorie2);

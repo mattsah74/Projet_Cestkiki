@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 
 public class accueil extends AppCompatActivity {
     private Button cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8, jouer;
-    private TextView txterreur, affichcate;
+    private TextView affichcate;
 
     int tour = 0; // utilisé pour rentrer les caté selectionne dans rajoutcate
 
@@ -32,7 +32,6 @@ public class accueil extends AppCompatActivity {
 
         int [] cateselec = {0, 0};
 
-        txterreur = (TextView) findViewById(R.id.txt_erreur);
         affichcate = (TextView) findViewById(R.id.affichcate);
 
         this.cat1 = (Button) this.findViewById(R.id.cat1);
@@ -45,6 +44,7 @@ public class accueil extends AppCompatActivity {
         this.cat8 = (Button) this.findViewById(R.id.cat8);
         this.jouer = (Button) this.findViewById(R.id.btn_jouer);
 
+        jouer.setEnabled(false);
 
         /*View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -148,22 +148,6 @@ public class accueil extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void rajoutcate(int[] tab, int cat){  // fonction qui nous maj notre tableau avec les categories selectionnées
-
-        /*if (tour==0){
-            if(tab[0] != cat && tab[1] != cat){
-                tab[0] = cat;
-                tour = 1;
-            }else{
-                txterreur.setText("Vous ne pouvez pas selectionner les 2 mêmes catégories");
-            }
-        }else{
-            if(tab[0] != cat && tab[1] != cat){
-                tab[1] = cat;
-                tour = 0;
-            }else{
-                txterreur.setText("Vous ne pouvez pas selectionner les 2 mêmes catégories");
-            }
-        }*/
         if (tour==0){
             tab[0] = cat;
             tour = 1;
@@ -174,7 +158,7 @@ public class accueil extends AppCompatActivity {
 
     }
 
-    private void majcat(int[] cate){  // fonction qui modifie le tableau pour le maj dans le cloud
+    private void majcat(int[] cate){  // fonction qui maj la phrase
         String[] tab = new String[2];
         switch(cate[0]){
             case 0:
@@ -238,6 +222,9 @@ public class accueil extends AppCompatActivity {
         affichcate.setText("Vous avez choisi : "+tab[0]+" et "+tab[1]);
     }
     private void majim (int[] tab){
+        if(tab[0]!=0 && tab[1]!=0){
+            jouer.setEnabled(true);
+        }
         cat1.setBackgroundColor(Color.parseColor("#bb86fc"));
         cat2.setBackgroundColor(Color.parseColor("#bb86fc"));
         cat3.setBackgroundColor(Color.parseColor("#bb86fc"));
@@ -247,32 +234,61 @@ public class accueil extends AppCompatActivity {
         cat7.setBackgroundColor(Color.parseColor("#bb86fc"));
         cat8.setBackgroundColor(Color.parseColor("#bb86fc"));
 
-        for(int i=0; i<2; i++){
-            switch (tab[i]){
+        if (tab[0] == tab[1]){ // pour le cas ou la meme categorie est selectionnée
+            switch (tab[0]){
                 case 1:
-                    cat1.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat1.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 2:
-                    cat2.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat2.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 3:
-                    cat3.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat3.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 4:
-                    cat4.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat4.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 5:
-                    cat5.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat5.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 6:
-                    cat6.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat6.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 7:
-                    cat7.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat7.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
                 case 8:
-                    cat8.setBackgroundColor(Color.parseColor("#ab0f81"));
+                    cat8.setBackgroundColor(Color.parseColor("#780b5a"));
                     break;
+            }
+        }else{
+            for(int i=0; i<2; i++){
+                switch (tab[i]){
+                    case 1:
+                        cat1.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 2:
+                        cat2.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 3:
+                        cat3.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 4:
+                        cat4.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 5:
+                        cat5.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 6:
+                        cat6.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 7:
+                        cat7.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                    case 8:
+                        cat8.setBackgroundColor(Color.parseColor("#ab0f81"));
+                        break;
+                }
             }
         }
     }
