@@ -221,6 +221,7 @@ public class accueil extends AppCompatActivity {
         }
         affichcate.setText("Vous avez choisi : "+tab[0]+" et "+tab[1]);
     }
+
     private void majim (int[] tab){
         if(tab[0]!=0 && tab[1]!=0){
             jouer.setEnabled(true);

@@ -16,6 +16,7 @@ public class prejeu extends AppCompatActivity {
     private TextView txt1, txt2;
     private Button creer_part, rejoindre;
     private String code_grille;
+    private int categorie1, categorie2;
 
 
     @Override
@@ -27,8 +28,8 @@ public class prejeu extends AppCompatActivity {
         setContentView(R.layout.activity_prejeu);
 
         Bundle extras = getIntent().getExtras();
-        int categorie1 = extras.getInt("cat1"); // cela permet de recuperer la valeur de l'activité main
-        int categorie2 = extras.getInt("cat2");
+        categorie1 = extras.getInt("cat1"); // cela permet de recuperer la valeur de l'activité main
+        categorie2 = extras.getInt("cat2");
 
 
         creer_part = (Button) findViewById(R.id.btn_creer);
@@ -86,33 +87,56 @@ public class prejeu extends AppCompatActivity {
         int nombreAleatoire = 0;
         int tab [] ;
         tab = new int [30];
-        int valide = 1;
         int tour = 0; // 1 - 12, nb d'images sur la partie graphique.
 
-        while(tour<12){
-            nombreAleatoire = (int)(Math.random() * (30));;
-            if(tab[nombreAleatoire]==0){
-                tab[nombreAleatoire] = 1;
-                tour++;
+        if (categorie1 == categorie2){
+            while(tour<12){
+                nombreAleatoire = (int)(Math.random() * (30));;
+
+                if(nombreAleatoire < 15 && tab[nombreAleatoire]==0 && tab[nombreAleatoire + 15]==0){
+                    tab[nombreAleatoire] = 1;
+                    tour++;
+                }
+                else if(nombreAleatoire > 14 && tab[nombreAleatoire]==0 && tab[nombreAleatoire - 15]==0){
+                    tab[nombreAleatoire] = 1;
+                    tour++;
+                }
             }
-        }
+            // CREATION DU BINAIRE ET TRADUCTION EN HEXADECIMAL
+            String s = "";
+            for (int i: tab) {
+                s = s + String.valueOf(i);
+            }
 
-        // CREATION DU BINAIRE ET TRADUCTION EN HEXADECIMAL
-        String s = "";
-        for (int i: tab) {
-            s = s + String.valueOf(i);
-        }
+            //valeur max = 31 chiffres.
 
-        //valeur max = 31 chiffres.
+            int valDec = Integer.parseInt(s, 2); // conversion binaire -> décimal
+            String valHex = Integer.toString(valDec, 16); // conversion décimal -> hexa
+            txt1.setText(String.valueOf(valHex));
 
-        int valDec = Integer.parseInt(s, 2); // conversion binaire -> décimal
-        String valHex = Integer.toString(valDec, 16); // conversion décimal -> hexa
-        txt1.setText(String.valueOf(valHex));
+            return valHex;
 
-        return valHex;
+        }else{
+            while(tour<12){
+                nombreAleatoire = (int)(Math.random() * (30));;
+                if(tab[nombreAleatoire]==0){
+                    tab[nombreAleatoire] = 1;
+                    tour++;
+                }
+            }
+            // CREATION DU BINAIRE ET TRADUCTION EN HEXADECIMAL
+            String s = "";
+            for (int i: tab) {
+                s = s + String.valueOf(i);
+            }
 
+            //valeur max = 31 chiffres.
+            int valDec = Integer.parseInt(s, 2); // conversion binaire -> décimal
+            String valHex = Integer.toString(valDec, 16); // conversion décimal -> hexa
+            txt1.setText(String.valueOf(valHex));
 
-    }
+            return valHex;
+    }}
 
     private String coderejoindre (String valHex){
         int deci = Integer.parseInt(valHex,16);   // conversion hexa -> décimal
