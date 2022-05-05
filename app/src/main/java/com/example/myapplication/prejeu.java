@@ -46,7 +46,6 @@ public class prejeu extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);*/
 
 
-
         this.creer_part.setOnClickListener(new Button.OnClickListener() {
 
             @Override
@@ -72,8 +71,6 @@ public class prejeu extends AppCompatActivity {
                     a.putExtra("codegrille", code_grille);
                     startActivity(a);
                 }
-
-
 
             }});
 
