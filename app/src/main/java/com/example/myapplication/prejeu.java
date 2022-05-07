@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -34,6 +35,9 @@ public class prejeu extends AppCompatActivity {
 
         creer_part = (Button) findViewById(R.id.btn_creer);
         rejoindre = (Button) findViewById(R.id.btn_rejoindre);
+
+        creer_part.setBackgroundColor(Color.parseColor("#bb86fc"));
+        rejoindre.setBackgroundColor(Color.parseColor("#bb86fc"));
 
 
         txt1 = (EditText) findViewById(R.id.txt_codeout);

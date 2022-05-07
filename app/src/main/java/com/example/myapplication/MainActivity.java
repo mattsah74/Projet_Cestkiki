@@ -48,6 +48,10 @@ public class MainActivity<image1> extends AppCompatActivity {
 
 
         this.button = (Button) this.findViewById(R.id.button);
+        this.regle = (Button) this.findViewById(R.id.regle);
+
+        button.setBackgroundColor(Color.parseColor("#bb86fc"));
+        regle.setBackgroundColor(Color.parseColor("#bb86fc"));
 
 
         this.button.setOnClickListener(new Button.OnClickListener() {
@@ -59,7 +63,7 @@ public class MainActivity<image1> extends AppCompatActivity {
             }
         });
 
-        this.regle = (Button) this.findViewById(R.id.regle);
+
 
 
         this.regle.setOnClickListener(new Button.OnClickListener() {

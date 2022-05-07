@@ -49,7 +49,16 @@ public class accueil extends AppCompatActivity {
         /*View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);*/
+        jouer.setBackgroundColor(Color.parseColor("#bb86fc"));
 
+        cat1.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat2.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat3.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat4.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat5.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat6.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat7.setBackgroundColor(Color.parseColor("#bb86fc"));
+        cat8.setBackgroundColor(Color.parseColor("#bb86fc"));
 
         this.cat1.setOnClickListener(new Button.OnClickListener() {
 

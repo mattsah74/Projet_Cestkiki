@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fond1"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="136dp"
     tools:layout_editor_absoluteY="2dp">
@@ -13,7 +14,7 @@
         android:id="@+id/button"
         android:layout_width="230dp"
         android:layout_height="66dp"
-        android:text="Jouer"
+        android:text="JOUER"
         android:textSize="24sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,17 +35,17 @@
         app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.841" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="277dp"
-        android:layout_height="265dp"
+        android:layout_width="249dp"
+        android:layout_height="236dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125"
+        app:layout_constraintVertical_bias="0.101"
         app:srcCompat="@drawable/logo_nuit2" />
 
     <TextView
