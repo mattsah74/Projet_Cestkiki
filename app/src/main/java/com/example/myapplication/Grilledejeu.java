@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -12,11 +13,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Grilledejeu extends AppCompatActivity {
-    private TextView temp1;
-    private Button test;
+    private TextView txt_popup;
+    private Button oui, non;
     private int categorie1, categorie2;
     private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12;
     private ImageView eto1, eto2, eto3, eto4,eto5, eto6, eto7, eto8, eto9, eto10, eto11, eto12 ;
+    private ImageView popup_fond;
     private int debut =0;
 
     @Override
@@ -34,6 +36,13 @@ public class Grilledejeu extends AppCompatActivity {
 
 
         int[] tabposition = majcodegrille(code);
+
+        popup_fond = (ImageView) findViewById(R.id.fondpopup);
+        txt_popup = (TextView) findViewById(R.id.txt_popup);
+        oui = (Button) findViewById(R.id.btn_popoui);
+        non = (Button) findViewById(R.id.btn_popnon);
+
+
         img1 = (ImageView) findViewById(R.id.img1);
         img2 = (ImageView) findViewById(R.id.img2);
         img3 = (ImageView) findViewById(R.id.img3);
@@ -60,6 +69,18 @@ public class Grilledejeu extends AppCompatActivity {
         eto11 = (ImageView) findViewById(R.id.eto11);
         eto12 = (ImageView) findViewById(R.id.eto12);
 
+        eto1.bringToFront();
+        eto2.bringToFront();
+        eto3.bringToFront();
+        eto4.bringToFront();
+        eto5.bringToFront();
+        eto6.bringToFront();
+        eto7.bringToFront();
+        eto8.bringToFront();
+        eto9.bringToFront();
+        eto10.bringToFront();
+        eto11.bringToFront();
+        eto12.bringToFront();
 
 
 
@@ -81,8 +102,24 @@ public class Grilledejeu extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions); */
 
+        this.oui.setOnClickListener(new Button.OnClickListener() {
 
-        img1.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txt_popup.setText("Bravo ! Tu as gagné ! N'hésite pas à rejouer ;)");
+            }});
+
+        this.non.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                popup_fond.setVisibility(View.INVISIBLE);
+                txt_popup.setVisibility(View.INVISIBLE);
+                oui.setVisibility(View.INVISIBLE);
+                non.setVisibility(View.INVISIBLE);
+            }});
+
+        this.img1.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -191,7 +228,7 @@ public class Grilledejeu extends AppCompatActivity {
         return tabfinal;
     }
 
-    private void afficherimage(ImageView img, int place){
+    private void afficherimage(ImageView img, int place){ //fonction qui sert à afficher les images
         int cat = categorie1;
         if(place>=15){
             place = place -15; //pour choisir dans la 2eme categorie
@@ -596,7 +633,7 @@ public class Grilledejeu extends AppCompatActivity {
         }
     }
 
-    private void transpa(ImageView img, int a){
+    private void transpa(ImageView img, int a){ // fonction qui sert à afficher l'etoile
         if (debut ==0){
             switch(a){
                 case 1:
@@ -643,10 +680,39 @@ public class Grilledejeu extends AppCompatActivity {
             if (opac == 1.0f){
                 img.setAlpha(0.4f);
             }
-            else if(opac == 0.4f){
-                img.setAlpha(1.0f);
-            }
+            else if(opac == 0.4f){ img.setAlpha(1.0f); }
         }
+        finpartie();
+    }
+
+    private void finpartie(){
+        int temp=0;
+        if (img1.getAlpha() == 0.4f){temp++;}
+        if (img2.getAlpha() == 0.4f){temp++;}
+        if (img3.getAlpha() == 0.4f){temp++;}
+        if (img4.getAlpha() == 0.4f){temp++;}
+        if (img5.getAlpha() == 0.4f){temp++;}
+        if (img6.getAlpha() == 0.4f){temp++;}
+        if (img7.getAlpha() == 0.4f){temp++;}
+        if (img8.getAlpha() == 0.4f){temp++;}
+        if (img9.getAlpha() == 0.4f){temp++;}
+        if (img10.getAlpha() == 0.4f){temp++;}
+        if (img11.getAlpha() == 0.4f){temp++;}
+        if (img12.getAlpha() == 0.4f){temp++;}
+
+        if (temp==11){
+            popup_fond.setVisibility(View.VISIBLE);
+            txt_popup.setVisibility(View.VISIBLE);
+            oui.setVisibility(View.VISIBLE);
+            non.setVisibility(View.VISIBLE);
+            txt_popup.setText("Est ce que ce personnage était le bon ?");
+            popup_fond.bringToFront();
+            txt_popup.bringToFront();
+            oui.bringToFront();
+            non.bringToFront();
+        }
+
+
     }
 
 }

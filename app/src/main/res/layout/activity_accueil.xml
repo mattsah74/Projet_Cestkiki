@@ -40,11 +40,11 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="407dp"
-        android:layout_height="48dp"
+        android:layout_width="529dp"
+        android:layout_height="46dp"
         android:text="Sélectionnez jusqu'à 2 catégories"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

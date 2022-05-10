@@ -49,6 +49,7 @@ public class accueil extends AppCompatActivity {
         /*View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);*/
+
         jouer.setBackgroundColor(Color.parseColor("#bb86fc"));
 
         cat1.setBackgroundColor(Color.parseColor("#bb86fc"));
@@ -175,13 +176,13 @@ public class accueil extends AppCompatActivity {
                 tab[0]= " ";
                 break;
             case 1:
-                tab[0]= "acteur";
+                tab[0]= "acteurs";
                 break;
             case 2:
-                tab[0]= "rappeur";
+                tab[0]= "rappeurs";
                 break;
             case 3:
-                tab[0]= "footballeur";
+                tab[0]= "footballeurs";
                 break;
             case 4:;
                 tab[0]= "manga / anime";
@@ -196,7 +197,7 @@ public class accueil extends AppCompatActivity {
                 tab[0]= "personnages de film";
                 break;
             case 8:
-                tab[0]= "acteurs X";
+                tab[0]= "acteurs porno";
                 break;
         }
         switch(cate[1]){
@@ -204,13 +205,13 @@ public class accueil extends AppCompatActivity {
                 tab[1]= "encore une autre ?";
                 break;
             case 1:
-                tab[1]= "acteur.";
+                tab[1]= "acteurs.";
                 break;
             case 2:
-                tab[1]= "rappeur.";
+                tab[1]= "rappeurs.";
                 break;
             case 3:
-                tab[1]= "footballeur.";
+                tab[1]= "footballeurs.";
                 break;
             case 4:;
                 tab[1]= "manga / anime.";
@@ -225,7 +226,7 @@ public class accueil extends AppCompatActivity {
                 tab[1]= "personnages de film.";
                 break;
             case 8:
-                tab[1]= "acteurs X.";
+                tab[1]= "acteurs porno.";
                 break;
         }
         affichcate.setText("Vous avez choisi : "+tab[0]+" et "+tab[1]);
