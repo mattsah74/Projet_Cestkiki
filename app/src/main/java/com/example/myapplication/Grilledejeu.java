@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 
 public class Grilledejeu extends AppCompatActivity {
     private TextView txt_popup;
-    private Button oui, non;
+    private Button oui, non, rejouer;
     private int categorie1, categorie2;
     private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12;
     private ImageView eto1, eto2, eto3, eto4,eto5, eto6, eto7, eto8, eto9, eto10, eto11, eto12 ;
@@ -41,6 +42,7 @@ public class Grilledejeu extends AppCompatActivity {
         txt_popup = (TextView) findViewById(R.id.txt_popup);
         oui = (Button) findViewById(R.id.btn_popoui);
         non = (Button) findViewById(R.id.btn_popnon);
+        rejouer = (Button) findViewById(R.id.rejouer);
 
 
         img1 = (ImageView) findViewById(R.id.img1);
@@ -107,6 +109,18 @@ public class Grilledejeu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 txt_popup.setText("Bravo ! Tu as gagné ! N'hésite pas à rejouer ;)");
+                non.setVisibility(View.INVISIBLE);
+                oui.setVisibility(View.INVISIBLE);
+                rejouer.setVisibility(View.VISIBLE);
+                rejouer.bringToFront();
+            }});
+
+        this.rejouer.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(Grilledejeu.this, accueil.class);
+                startActivity(a);
             }});
 
         this.non.setOnClickListener(new Button.OnClickListener() {

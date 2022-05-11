@@ -340,4 +340,20 @@
         app:layout_constraintVertical_bias="0.728"
         tools:visibility="visible" />
 
+    <Button
+        android:id="@+id/rejouer"
+        android:layout_width="151dp"
+        android:layout_height="69dp"
+        android:text="REJOUER"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fondpopup"
+        app:layout_constraintEnd_toEndOf="@+id/fondpopup"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/fondpopup"
+        app:layout_constraintTop_toTopOf="@+id/fondpopup"
+        app:layout_constraintVertical_bias="0.721"
+        tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
