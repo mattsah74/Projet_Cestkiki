@@ -130,8 +130,6 @@ public class prejeu extends AppCompatActivity {
             for (int i: tab) {
                 s = s + String.valueOf(i);
             }
-
-            //valeur max = 31 chiffres.
             int valDec = Integer.parseInt(s, 2); // conversion binaire -> décimal
             String valHex = Integer.toString(valDec, 16); // conversion décimal -> hexa
             txt1.setText(String.valueOf(valHex));

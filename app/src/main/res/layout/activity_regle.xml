@@ -27,7 +27,7 @@
         android:id="@+id/textView4"
         android:layout_width="712dp"
         android:layout_height="293dp"
-        android:text="1)	Choisis deux catégories de personnes/personnages célèbres. \n 2)	Partage le code partie à ton ami puis clique sur Jouer. Si tu veux rejoindre une partie, sélectionnes les mêmes catégories que ton ami, copies son code partie et clique sur Rejoindre une partie \n 3)	Essaye ensuite de faire deviner ta carte en posant des questions auquel on ne peut répondre que par oui et non. La première carte que tu touches sera le perso que tu vas faire deviner : tu ne pourras plus la changer après et elle sera indiquée par une étoile. \n 4)	Tu peux griser les persos que tu penses pouvoir éliminer en cliquant dessus.	"
+        android:text="1)	Choisis deux catégories de personnes/personnages célèbres. \n 2)	Partage le code partie à ton ami puis clique sur Jouer. Si tu veux rejoindre une partie, sélectionnes les mêmes catégories que ton ami, copies son code partie et clique sur Rejoindre une partie \n 3)	Essaye ensuite de faire deviner ta carte en posant des questions auquelles on ne peut répondre que par oui et non. La première carte que tu touches sera le perso que tu vas faire deviner : tu ne pourras plus la changer après et elle sera indiquée par une étoile. \n 4)	Tu peux griser les persos que tu penses pouvoir éliminer en cliquant dessus.	"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="21sp"
