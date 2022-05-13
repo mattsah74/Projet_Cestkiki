@@ -649,6 +649,9 @@ public class Grilledejeu extends AppCompatActivity {
 
     private void transpa(ImageView img, int a){ // fonction qui sert à afficher l'etoile
         if (debut ==0){
+            String nom = "eto";
+            nom= nom+Integer.toString(a);
+            nom.setVisibility(View.VISIBLE);
             switch(a){
                 case 1:
                     eto1.setVisibility(View.VISIBLE);
